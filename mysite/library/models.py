@@ -22,7 +22,7 @@ class Book(models.Model):
 class BookInstance(models.Model):
     book = models.ForeignKey(to="Book", verbose_name="Knyga", on_delete=models.CASCADE)
     uuid = models.UUIDField(default=uuid.uuid4)
-    due_back = models.DateField(verbose_name="Bus prieinama", null=true, blank=True)
+    due_back = models.DateField(verbose_name="Bus prieinama", null=True, blank=True)
 
     LOAN_STATUS = (
         ('a', 'Administruojama'),
